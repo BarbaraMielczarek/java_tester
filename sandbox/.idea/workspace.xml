@@ -169,13 +169,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/GroupCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="82" column="3" lean-forward="true" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
+            <state relative-caret-position="-198">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1211#1212#0" expanded="true" />
                 <element signature="e#1270#1271#0" expanded="true" />
                 <element signature="e#1243#1244#0" expanded="true" />
@@ -186,6 +185,18 @@
                 <element signature="e#1811#1812#0" expanded="true" />
                 <element signature="e#2111#2112#0" expanded="true" />
                 <element signature="e#2166#2167#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/ContactCreationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-572">
+              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,6 +232,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/tester/sandbox/PointTests.java" />
         <option value="$PROJECT_DIR$/../addressbook-web-tests/build.gradle" />
         <option value="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/GroupCreationTests.java" />
+        <option value="$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/ContactCreationTests.java" />
       </list>
     </option>
   </component>
@@ -282,7 +294,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548884320840" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548887223378" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="extract.method.default.visibility" value="private" />
@@ -313,22 +325,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests">
+  <component name="RunManager" selected="TestNG.ContactCreationTests">
     <configuration name="MyFirstProgram " type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.tester.sandbox.MyFirstProgram" />
-      <module name="sandbox.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.tester.sandbox.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyPoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.tester.sandbox.MyPoint" />
       <module name="sandbox.main" />
       <extension name="coverage">
         <pattern>
@@ -362,6 +361,22 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.tester.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.tester.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.tester.addressbook.ContactCreationTests" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -416,19 +431,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.MyFirstProgram " />
-      <item itemvalue="Application.MyPoint" />
       <item itemvalue="Application.PointByFunction" />
       <item itemvalue="TestNG.SquareTests" />
       <item itemvalue="TestNG.PointTests" />
       <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.ContactCreationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.PointTests" />
         <item itemvalue="TestNG.SquareTests" />
         <item itemvalue="Application.PointByFunction" />
-        <item itemvalue="Application.MyPoint" />
       </list>
     </recent_temporary>
   </component>
@@ -446,9 +461,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PointTests - 2019.01.29 at 22h 25m 30s.xml">
-      <configuration name="PointTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="PointTests - 2019.01.29 at 22h 26m 40s.xml">
       <configuration name="PointTests" configurationId="TestNG" />
     </history-entry>
@@ -476,12 +488,15 @@
     <history-entry file="GroupCreationTests - 2019.01.30 at 22h 29m 11s.xml">
       <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ContactCreationTests - 2019.01.30 at 23h 23m 13s.xml">
+      <configuration name="ContactCreationTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="1" width="2572" height="1405" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13057324" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13057324" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -491,7 +506,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32914376" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32914376" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -695,10 +710,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="82" column="3" lean-forward="true" selection-start-line="82" selection-start-column="3" selection-end-line="82" selection-end-column="3" />
+        <state relative-caret-position="-198">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
             <element signature="e#1270#1271#0" expanded="true" />
             <element signature="e#1243#1244#0" expanded="true" />
@@ -709,6 +723,16 @@
             <element signature="e#1811#1812#0" expanded="true" />
             <element signature="e#2111#2112#0" expanded="true" />
             <element signature="e#2166#2167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-572">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
