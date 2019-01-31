@@ -8,9 +8,9 @@ public class ContactCreationTests extends TestBase {
 
   @Test
   public void testContactCreation() throws Exception {
-    app.gotoAddNew();
-    app.fillAddressBookEntry(new ContactData("Magdalena", "Ptak", "Network Administrator", "Niko", "Prosta 12, 00-850 Warszawa", "502698730", "225894713", "magdalena.ptak@niko.com"));
-    app.submitAddressBookEntry();
+    app.getNavigationHelper().gotoAddNew();
+    app.getContactHelper().fillAddressBookEntry(new ContactData("Anna", "Malec", "Human Resource Specialist", "Niko", "Prosta 12, 00-850 Warszawa", "502698780", "225894780", "anna.malec@niko.com"));
+    app.getContactHelper().submitAddressBookEntry();
   }
 
 
