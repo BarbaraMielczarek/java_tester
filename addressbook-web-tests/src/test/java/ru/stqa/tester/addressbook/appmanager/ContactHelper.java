@@ -43,4 +43,11 @@ public class ContactHelper extends BaseHelper {
     click(By.xpath("//input[@name='update']"));
   }
 
+  public void initContactCreation() {
+    click(By.linkText("add new"));
+  }
+
+  public void returnToHomePage() {
+    click(By.linkText("home page"));
+  }
 }
