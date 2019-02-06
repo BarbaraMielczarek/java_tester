@@ -12,7 +12,7 @@ public class ContactModificationTests extends TestBase {
     app.getContactHelper().fillContactForm(new ContactData(
             "Maciej", "Widzew", "Niko SA", "Area Sales Manager",
             "Prosta 25, 89-001 Warszawa",
-            "502698900", "25894900", "maciej.widzew@niko.com", null), false);
+            "502698900", "225894900", "maciej.widzew@niko.com", null), false);
     app.getContactHelper().updatedContactModification();
     app.getContactHelper().returnToHomePage();
   }
