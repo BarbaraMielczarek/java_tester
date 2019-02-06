@@ -37,12 +37,14 @@ public class BaseHelper {
     }
   }
 
-  public boolean isElementPresent(By by) {
+  public boolean isElementPresent(By lokator) {
     try {
-      wd.findElement(by);
+      wd.findElement(lokator);
       return true;
-    } catch (NoSuchElementException e) {
+    } catch (NoSuchElementException ex) {
       return false;
     }
   }
+
+
 }
