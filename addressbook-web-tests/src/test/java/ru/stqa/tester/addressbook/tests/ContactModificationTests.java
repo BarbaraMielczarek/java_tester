@@ -9,7 +9,7 @@ public class ContactModificationTests extends TestBase {
   public void testContactModification() {
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().initContactModification();
-    app.getContactHelper().fillAddressBookEntry(new ContactData("Piotr", "Czerko", "Niko SA", "Area Sales Manager", "Prosta 25, 89-001 Warszawa", "502698700", "25894700", "piotr.czerko@niko.com"));
+    app.getContactHelper().fillAddressBookEntry(new ContactData("Maciej", "Widzew", "Niko SA", "Area Sales Manager", "Prosta 25, 89-001 Warszawa", "502698900", "25894900", "maciej.widzew@niko.com"));
     app.getContactHelper().updatedContactModification();
     app.getContactHelper().returnToHomePage();
   }
