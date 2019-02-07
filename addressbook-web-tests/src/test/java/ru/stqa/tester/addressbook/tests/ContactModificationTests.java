@@ -8,6 +8,12 @@ public class ContactModificationTests extends TestBase {
   @Test
   public void testContactModification() {
     app.getNavigationHelper().gotoHomePage();
+    if (!app.getContactHelper().isThereAContact()) {
+      app.getContactHelper().createContact(new ContactData(
+              "Kamila", "Potocka", "Finance and Administration Manager ",
+              "Niko", "Prosta 12, 00-850 Warszawa",
+              "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
+    }
     app.getContactHelper().initContactModification();
     app.getContactHelper().fillContactForm(new ContactData(
             "Maciej", "Widzew", "Niko SA", "Area Sales Manager",
