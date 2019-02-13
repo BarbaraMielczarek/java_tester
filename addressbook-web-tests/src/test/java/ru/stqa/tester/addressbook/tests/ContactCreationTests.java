@@ -16,7 +16,7 @@ public class ContactCreationTests extends TestBase {
             "Niko", "Prosta 12, 00-850 Warszawa",
             "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
     int after = app.getContactHelper().getContactCount();
-    Assert.assertEquals(after, before +1);
-     }
+    Assert.assertEquals(after, before + 1);
+  }
 
 }
