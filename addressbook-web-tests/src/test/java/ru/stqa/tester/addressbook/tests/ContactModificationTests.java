@@ -17,11 +17,11 @@ public class ContactModificationTests extends TestBase {
               "Niko", "Prosta 12, 00-850 Warszawa",
               "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
     }
-    app.getContactHelper().initContactModification();
+    app.getContactHelper().initContactModification(before - 1 );
     app.getContactHelper().fillContactForm(new ContactData(
-            "Maciej", "Widzew", "Niko SA", "Area Sales Manager",
+            "Marcin", "Widzew", "Niko SA", "Area Sales Manager",
             "Prosta 25, 89-001 Warszawa",
-            "502698900", "225894900", "maciej.widzew@niko.com", null), false);
+            "502698900", "225894900", "marcin.widzew@niko.com", null), false);
     app.getContactHelper().updatedContactModification();
     app.getContactHelper().returnToHomePage();
 
