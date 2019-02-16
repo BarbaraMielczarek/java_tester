@@ -20,6 +20,6 @@ public class ContactCreationTests extends TestBase {
             "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
     List<ContactData> after = app.getContactHelper().getContactList();
     Assert.assertEquals(after.size(), before.size() + 1);
-  }
 
+  }
 }

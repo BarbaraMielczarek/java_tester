@@ -3,6 +3,8 @@ apply plugin: 'application'
 mainClassName = "ru.stqa.tester.sandbox.MyFirstProgram"
 mainClassName = "ru.stqa.tester.sandbox.MyPoint"
 mainClassName = "ru.stqa.tester.sandbox.PointByFunction"
+mainClassName = "ru.stqa.tester.sandbox.Colections"
+
 
 
 repositories {
