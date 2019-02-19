@@ -61,18 +61,23 @@ public class ContactHelper extends BaseHelper {
     click(By.linkText("home page"));
   }
 
-  public void createContact(ContactData contact, boolean creation) {
+  public void create(ContactData contact, boolean creation) {
     initContactCreation();
     fillContactForm(contact, creation);
     submitAddressBookEntry();
     returnToHomePage();
   }
 
-  public void modifyContact(int index, ContactData contact) {
+  public void modify(int index, ContactData contact) {
     initContactModification(index);
     fillContactForm(contact, false);
     updatedContactModification();
     returnToHomePage();
+  }
+
+  public void delete(int index) {
+    selectContact(index);
+    deleteSelectedContacts();
   }
 
   public boolean isThereAContact() {
@@ -83,7 +88,7 @@ public class ContactHelper extends BaseHelper {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<ContactData> getContactList() {
+  public List<ContactData> list() {
     List<ContactData> contacts = new ArrayList<ContactData>();
     List<WebElement> rows = wd.findElements(By.name("entry"));
     for (WebElement row : rows) {
