@@ -13,10 +13,9 @@ public class ContactDeletionTests extends TestBase {
   public void ensurePreconditions() {
     app.goTo().homePage();
     if (app.contact().list().size() == 0) {
-      app.contact().create(new ContactData(
-              "Kamila", "Potocka", "Finance and Administration Manager ",
-              "Niko", "Prosta 12, 00-850 Warszawa",
-              "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
+      app.contact().create(new ContactData()
+              .withFirstname("Kamila").withLastname("Potocka").withTitle("Finance and Administration Manager ").withCompany("Niko")
+              .withCompanyAddress("Prosta 12, 00-850 Warszawa").withMobile("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10"),true);
     }
   }
 

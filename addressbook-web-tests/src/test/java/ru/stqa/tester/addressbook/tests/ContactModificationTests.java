@@ -14,10 +14,9 @@ public class ContactModificationTests extends TestBase {
   public void ensurePreconditions() {
     app.goTo().homePage();
     if (app.contact().list().size() == 0) {
-      app.contact().create(new ContactData(
-              "Kamila", "Potocka", "Finance and Administration Manager ",
-              "Niko", "Prosta 12, 00-850 Warszawa",
-              "502698990", "225894990", "kamila.potocka@niko.com", "test10"), true);
+      app.contact().create(new ContactData()
+              .withFirstname("Kamila").withLastname("Potocka").withTitle("Finance and Administration Manager ").withCompany("Niko")
+              .withCompanyAddress("Prosta 12, 00-850 Warszawa").withMobile("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10"), true);
     }
   }
 
@@ -25,10 +24,8 @@ public class ContactModificationTests extends TestBase {
   public void testContactModification() {
     List<ContactData> before = app.contact().list();
     int index = before.size() - 1;
-    ContactData contact = new ContactData(
-            before.get(index).getId(), "Marcin", "Widzew", "Niko SA", "Area Sales Manager",
-            "Prosta 25, 89-001 Warszawa",
-            "502698900", "225894900", "marcin.widzew@niko.com", null);
+    ContactData contact = new ContactData().withId(before.get(index).getId()).withFirstname("Marcin").withLastname("Widzew").withCompany("Niko SA").withTitle("Area Sales Manager")
+            .withCompanyAddress("Prosta 25, 89-001 Warszawa").withMobile("502698900").withWorkPhone("225894900").withEmail("marcin.widzew@niko.com").withGroup(null);
     app.contact().modify(index, contact);
     List<ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size());

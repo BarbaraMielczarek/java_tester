@@ -3,48 +3,71 @@ package ru.stqa.tester.addressbook.model;
 import java.util.Objects;
 
 public class ContactData {
-  private  int id;
-  private final String firstname;
-  private final String lastname;
-  private final String title;
-  private final String company;
-  private final String companyAddress;
-  private final String mobile;
-  private final String workPhone;
-  private final String email;
+  private int id = Integer.MAX_VALUE;
+  private String firstname;
+  private String lastname;
+  private String title;
+  private String company;
+  private String companyAddress;
+  private String mobile;
+  private String workPhone;
+  private String email;
   private String group;
 
 
-  public ContactData(String firstname, String lastname, String title, String company, String companyAddress, String mobile, String workPhone, String email, String group) {
-    this.id = Integer.MAX_VALUE;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.title = title;
-    this.company = company;
-    this.companyAddress = companyAddress;
-    this.mobile = mobile;
-    this.workPhone = workPhone;
-    this.email = email;
-    this.group = group;
-  }
-  public ContactData(int id, String firstname, String lastname, String title, String company, String companyAddress, String mobile, String workPhone, String email, String group) {
+  public ContactData withId(int id) {
     this.id = id;
-    this.firstname = firstname;
-    this.lastname = lastname;
-    this.title = title;
-    this.company = company;
-    this.companyAddress = companyAddress;
-    this.mobile = mobile;
-    this.workPhone = workPhone;
-    this.email = email;
-    this.group = group;
+    return this;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public ContactData withFirstname(String firstname) {
+    this.firstname = firstname;
+    return this;
   }
 
-  public int getId() {return id;  }
+  public ContactData withLastname(String lastname) {
+    this.lastname = lastname;
+    return this;
+  }
+
+  public ContactData withTitle(String title) {
+    this.title = title;
+    return this;
+  }
+
+  public ContactData withCompany(String company) {
+    this.company = company;
+    return this;
+  }
+
+  public ContactData withCompanyAddress(String companyAddress) {
+    this.companyAddress = companyAddress;
+    return this;
+  }
+
+  public ContactData withMobile(String mobile) {
+    this.mobile = mobile;
+    return this;
+  }
+
+  public ContactData withWorkPhone(String workPhone) {
+    this.workPhone = workPhone;
+    return this;
+  }
+
+  public ContactData withEmail(String email) {
+    this.email = email;
+    return this;
+  }
+
+  public ContactData withGroup(String group) {
+    this.group = group;
+    return this;
+  }
+
+  public int getId() {
+    return id;
+  }
 
   public String getFirstname() {
     return firstname;
