@@ -8,9 +8,7 @@ import org.testng.Assert;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ContactHelper extends BaseHelper {
 
@@ -66,24 +64,27 @@ public class ContactHelper extends BaseHelper {
     click(By.linkText("home page"));
   }
 
+
   public void create(ContactData contact, boolean creation) {
     initContactCreation();
     fillContactForm(contact, creation);
     submitAddressBookEntry();
+    contacCache = null;
     returnToHomePage();
   }
-
 
   public void modify(ContactData contact) {
     initContactModificationById(contact.getId());
     fillContactForm(contact, false);
     updatedContactModification();
+    contacCache = null;
     returnToHomePage();
   }
 
   public void delete(ContactData contact) {
     selectContactById(contact.getId());
     deleteSelectedContacts();
+    contacCache = null;
   }
 
   public boolean isThereAContact() {
@@ -94,8 +95,13 @@ public class ContactHelper extends BaseHelper {
     return wd.findElements(By.name("selected[]")).size();
   }
 
+  private Contacts contacCache = null;
+
   public Contacts all() {
-    Contacts contacts = new Contacts();
+    if (contacCache != null) {
+      return new Contacts(contacCache);
+    }
+    contacCache = new Contacts();
     List<WebElement> rows = wd.findElements(By.name("entry"));
     for (WebElement row : rows) {
       List<WebElement> cells = row.findElements(By.tagName("td"));
@@ -103,9 +109,9 @@ public class ContactHelper extends BaseHelper {
       int id = Integer.parseInt(row.findElement(By.tagName("input")).getAttribute("value"));
       String lastname = cells.get(1).getText();
       String firstname = cells.get(2).getText();
-      contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
+      contacCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
     }
-    return contacts;
+    return new Contacts(contacCache);
   }
 
 
