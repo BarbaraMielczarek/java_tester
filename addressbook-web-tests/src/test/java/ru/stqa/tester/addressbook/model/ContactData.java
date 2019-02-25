@@ -9,10 +9,12 @@ public class ContactData {
   private String title;
   private String company;
   private String companyAddress;
+  private String home;
   private String mobile;
   private String workPhone;
   private String email;
   private String group;
+
 
 
   public ContactData withId(int id) {
@@ -43,6 +45,10 @@ public class ContactData {
   public ContactData withCompanyAddress(String companyAddress) {
     this.companyAddress = companyAddress;
     return this;
+  }
+  public ContactData withHome(String home) {
+    this.home = home;
+    return  this;
   }
 
   public ContactData withMobile(String mobile) {
@@ -89,6 +95,7 @@ public class ContactData {
     return companyAddress;
   }
 
+  public String getHome() {return home;}
 
   public String getMobile() {
     return mobile;
@@ -130,4 +137,6 @@ public class ContactData {
   public int hashCode() {
     return Objects.hash(id, firstname, lastname);
   }
+
+
 }

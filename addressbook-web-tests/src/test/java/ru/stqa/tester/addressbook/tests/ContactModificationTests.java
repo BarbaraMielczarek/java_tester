@@ -17,7 +17,7 @@ public class ContactModificationTests extends TestBase {
     if (app.contact().all().size() == 0) {
       app.contact().create(new ContactData()
               .withFirstname("Kamila").withLastname("Potocka").withTitle("Finance and Administration Manager ").withCompany("Niko")
-              .withCompanyAddress("Prosta 12, 00-850 Warszawa").withMobile("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10"), true);
+              .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHome("225118967").withMobile("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10"), true);
     }
   }
 
@@ -26,7 +26,7 @@ public class ContactModificationTests extends TestBase {
     Contacts before = app.contact().all();
     ContactData modifiedContact = before.iterator().next();
     ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Marcin").withLastname("Widzew").withCompany("Niko SA").withTitle("Area Sales Manager")
-            .withCompanyAddress("Prosta 25, 89-001 Warszawa").withMobile("502698900").withWorkPhone("225894900").withEmail("marcin.widzew@niko.com").withGroup(null);
+            .withCompanyAddress("Prosta 25, 89-001 Warszawa").withHome("225118967").withMobile("502698900").withWorkPhone("225894900").withEmail("marcin.widzew@niko.com").withGroup(null);
     app.contact().modify(contact);
     assertEquals(app.contact().count(), before.size());
     Contacts after = app.contact().all();
