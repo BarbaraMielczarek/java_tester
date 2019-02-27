@@ -9,8 +9,8 @@ public class ContactData {
   private String title;
   private String company;
   private String companyAddress;
-  private String home;
-  private String mobile;
+  private String homePhone;
+  private String mobilePhone;
   private String workPhone;
   private String email;
   private String group;
@@ -46,13 +46,13 @@ public class ContactData {
     this.companyAddress = companyAddress;
     return this;
   }
-  public ContactData withHome(String home) {
-    this.home = home;
+  public ContactData withHomePhone(String homePhone) {
+    this.homePhone = homePhone;
     return  this;
   }
 
-  public ContactData withMobile(String mobile) {
-    this.mobile = mobile;
+  public ContactData withMobilePhone(String mobilePhone) {
+    this.mobilePhone = mobilePhone;
     return this;
   }
 
@@ -95,10 +95,10 @@ public class ContactData {
     return companyAddress;
   }
 
-  public String getHome() {return home;}
+  public String getHomePhone() {return homePhone;}
 
-  public String getMobile() {
-    return mobile;
+  public String getMobilePhone() {
+    return mobilePhone;
   }
 
   public String getWorkPhone() {
@@ -117,9 +117,12 @@ public class ContactData {
   @Override
   public String toString() {
     return "ContactData{" +
-            "id='" + id + '\'' +
+            "id=" + id +
             ", firstname='" + firstname + '\'' +
             ", lastname='" + lastname + '\'' +
+            ", homePhone='" + homePhone + '\'' +
+            ", mobilePhone='" + mobilePhone + '\'' +
+            ", workPhone='" + workPhone + '\'' +
             '}';
   }
 
@@ -130,13 +133,14 @@ public class ContactData {
     ContactData that = (ContactData) o;
     return id == that.id &&
             Objects.equals(firstname, that.firstname) &&
-            Objects.equals(lastname, that.lastname);
+            Objects.equals(lastname, that.lastname) &&
+            Objects.equals(homePhone, that.homePhone) &&
+            Objects.equals(mobilePhone, that.mobilePhone) &&
+            Objects.equals(workPhone, that.workPhone);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstname, lastname);
+    return Objects.hash(id, firstname, lastname, homePhone, mobilePhone, workPhone);
   }
-
-
 }
