@@ -19,7 +19,8 @@ public class ContactCreationTests extends TestBase {
     Contacts before = app.contact().all();
     ContactData contact = new ContactData()
             .withFirstname("Kamila").withLastname("Potocka").withCompany("Niko").withTitle("Finance and Administration Manager ")
-            .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10");
+            .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990")
+            .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("test10");
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size() + 1);
     Contacts after = app.contact().all();
@@ -27,13 +28,14 @@ public class ContactCreationTests extends TestBase {
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }
 
-  @Test(enabled = false)
+  @Test
   public void testBadContactCreation() throws Exception {
     app.goTo().homePage();
     Contacts before = app.contact().all();
     ContactData contact = new ContactData()
             .withFirstname("Kamila'").withLastname("Potocka").withTitle("Finance and Administration Manager ").withCompany("Niko")
-            .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990").withEmail("kamila.potocka@niko.com").withGroup("test10");
+            .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990")
+            .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("test10");
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size());
     Contacts after = app.contact().all();
