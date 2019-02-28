@@ -18,6 +18,8 @@ public class ContactData {
   private String email3;
   private String allEmails;
   private String group;
+  private String name;
+
 
 
 
@@ -93,6 +95,10 @@ public class ContactData {
     this.group = group;
     return this;
   }
+  public ContactData withName(String name) {
+    this.name = name;
+    return  this;
+  }
 
   public int getId() {
     return id;
@@ -142,6 +148,8 @@ public class ContactData {
     return group;
   }
 
+  public String getName() {return name;}
+
   @Override
   public String toString() {
     return "ContactData{" +
@@ -165,4 +173,5 @@ public class ContactData {
   public int hashCode() {
     return Objects.hash(id, firstname, lastname);
   }
+
 }
