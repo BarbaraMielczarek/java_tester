@@ -4,9 +4,6 @@ import org.testng.annotations.Test;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.testng.Assert.assertEquals;

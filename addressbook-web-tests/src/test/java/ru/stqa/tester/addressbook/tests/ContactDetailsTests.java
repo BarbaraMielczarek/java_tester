@@ -1,7 +1,5 @@
 package ru.stqa.tester.addressbook.tests;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.tester.addressbook.model.ContactData;
@@ -26,21 +24,16 @@ public class ContactDetailsTests extends TestBase {
   }
 
   @Test
-  public void testContactDetails (){
+  public void testContactDetails() {
     ContactData contact = app.contact().all().iterator().next();
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
     ContactData contactInfoFromDetailsForm = app.contact().infoFromDetailsForm(contact);
 
-    assertThat(margeDetails(contactInfoFromEditForm), equalTo(contactInfoFromDetailsForm));
+    assertThat(margeDetails(contactInfoFromEditForm), equalTo(contactInfoFromDetailsForm.getName()));
   }
 
 
-  private String margeNames(ContactData contact) {
-    return Arrays.asList(contact.getName(), contact.getLastname(), contact.getTitle(), contact.getCompany(),contact.getCompanyAddress())
-            .stream().collect(Collectors.joining("\n"));
-  }
-
-  private String margePhones (ContactData contact){
+  private String margePhonesForDetails(ContactData contact) {
     return Arrays.asList("H: " + contact.getHomePhone(), "M: " + contact.getMobilePhone(), "W: " + contact.getWorkPhone())
             .stream().collect(Collectors.joining("\n"));
   }
@@ -51,13 +44,16 @@ public class ContactDetailsTests extends TestBase {
             .map(ContactPhoneEmailAddressTests::cleaned).collect(Collectors.joining("\n"));
   }
 
-  private String margeDetails (ContactData contact){
-   return Arrays.asList(margeNames(contact), margePhones(contact), margeEmails(contact), "Member of: " + contact.getGroup())
-    .stream().collect(Collectors.joining("\n\n"));
+
+  private String margeNames(ContactData contact) {
+    return Arrays.asList(contact.getFirstname() + " " + contact.getLastname(), contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
+            .stream().collect(Collectors.joining("\n"));
+  }
+
+  private String margeDetails(ContactData contact) {
+    return Arrays.asList(margeNames(contact), margePhonesForDetails(contact), margeEmails(contact))
+            .stream().collect(Collectors.joining("\n\n"));
 
   }
 
-  /*public static String cleaned(String phone) {
-    return phone.replaceAll("\\s", "").replaceAll("[A-Z]", "").replaceAll(":", "");
-  }*/
 }

@@ -1,6 +1,5 @@
 package ru.stqa.tester.addressbook.appmanager;
 
-import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

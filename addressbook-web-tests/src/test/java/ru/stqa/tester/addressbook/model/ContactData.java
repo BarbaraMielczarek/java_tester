@@ -144,9 +144,7 @@ public class ContactData {
 
   public String getAllEmails() {return allEmails;}
 
-  public String getGroup() {
-    return group;
-  }
+  public String getGroup() {return group;}
 
   public String getName() {return name;}
 
