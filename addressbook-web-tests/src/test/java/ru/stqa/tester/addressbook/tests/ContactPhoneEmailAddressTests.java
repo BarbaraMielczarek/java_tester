@@ -4,6 +4,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ru.stqa.tester.addressbook.model.ContactData;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -17,8 +18,9 @@ public class ContactPhoneEmailAddressTests extends TestBase {
   public void ensurePreconditions() {
     app.goTo().homePage();
     if (app.contact().all().size() == 0) {
+      File photo = new File("src/test/resources/obrazek.png");
       app.contact().create(new ContactData()
-              .withFirstname("Kamila").withLastname("Potocka").withTitle("Finance and Administration Manager").withCompany("Niko")
+              .withFirstname("Kamila").withLastname("Potocka").withPhoto(photo).withTitle("Finance and Administration Manager").withCompany("Niko")
               .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225894990").withMobilePhone("502698990").withWorkPhone("225894990")
               .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("[none]"), true);
     }

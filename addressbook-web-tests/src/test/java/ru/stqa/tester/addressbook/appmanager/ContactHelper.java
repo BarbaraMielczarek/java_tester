@@ -8,6 +8,8 @@ import org.testng.Assert;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.List;
 
 public class ContactHelper extends BaseHelper {
@@ -139,18 +141,17 @@ public class ContactHelper extends BaseHelper {
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
   }
 
+
   private void initContactModificationById(int id) {
     WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
     WebElement row = checkbox.findElement(By.xpath("./../.."));
     List<WebElement> cells = row.findElements(By.tagName("td"));
     cells.get(7).findElement(By.tagName("a")).click();
 
-
     //alternatywa
     //wd.findElement(By.xpath(String.format("/input[@value='%s']/../../td[8]/a",id))).click();
     //wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a", id))).click();
     //wd.findElement(By.xpath(String.format("a[href='edit.php?id=%s']", id))).click();
-
 
   }
 
