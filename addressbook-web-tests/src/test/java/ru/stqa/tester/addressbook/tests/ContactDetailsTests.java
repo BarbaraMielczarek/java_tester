@@ -20,7 +20,7 @@ public class ContactDetailsTests extends TestBase {
     if (app.contact().all().size() == 0) {
       File photo = new File("src/test/resources/obrazek.png");
       app.contact().create(new ContactData()
-              .withFirstname("Kamila").withLastname("Potocka").withPhoto(photo).withTitle("Finance and Administration Manager").withCompany("Niko")
+              .withFirstname("Kamila").withLastname("Potocka").withTitle("Finance and Administration Manager").withCompany("Niko")
               .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225894990").withMobilePhone("502698990").withWorkPhone("225894990")
               .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("[none]"), true);
     }
@@ -32,13 +32,18 @@ public class ContactDetailsTests extends TestBase {
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
     ContactData contactInfoFromDetailsForm = app.contact().infoFromDetailsForm(contact);
 
-    assertThat(margeDetails(contactInfoFromEditForm), equalTo(contactInfoFromDetailsForm.getName()));
+    assertThat(margeDetails(contactInfoFromEditForm), equalTo(cleanedPhones(contactInfoFromDetailsForm.getName())));
   }
 
 
+  private String margeTitle(ContactData contact) {
+    return Arrays.asList((contact.getFirstname() + " " + contact.getLastname()).trim(),  contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
+            .stream().filter((n) -> !n.equals("")).collect(Collectors.joining("\n"));
+  }
+
   private String margePhonesForDetails(ContactData contact) {
-    return Arrays.asList("H: " + contact.getHomePhone(), "M: " + contact.getMobilePhone(), "W: " + contact.getWorkPhone())
-            .stream().collect(joining("\n"));
+    return Arrays.asList(contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone())
+            .stream().filter((p) -> !p.equals("")).collect(joining("\n"));
   }
 
   private String margeEmails(ContactData contact) {
@@ -47,20 +52,13 @@ public class ContactDetailsTests extends TestBase {
             .map(ContactPhoneEmailAddressTests::cleaned).collect(joining("\n"));
   }
 
-
-  private String margeNames(ContactData contact) {
-    return Arrays.asList(contact.getFirstname() + " " + contact.getLastname()).stream().collect(Collectors.joining("\n"));
-  }
-
-  private String margeTitle(ContactData contact) {
-    return Arrays.asList(contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
-            .stream().collect(Collectors.joining("\n"));
-  }
-
   private String margeDetails(ContactData contact) {
-    return Arrays.asList(margeNames(contact), margeTitle(contact), margePhonesForDetails(contact), margeEmails(contact))
-            .stream().collect(Collectors.joining("\n\n"));
+    return Arrays.asList(margeTitle(contact), margePhonesForDetails(contact), margeEmails(contact))
+            .stream().filter((d) -> !d.equals("")).collect(Collectors.joining("\n\n"));
+  }
 
+  public String cleanedPhones (String name){
+    return name.replaceAll("[A-Z]: ", "");
   }
 
 }
