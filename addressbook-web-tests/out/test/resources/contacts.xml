@@ -1,6 +1,5 @@
 <list>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 0</firstname>
     <lastname>Potocka 0</lastname>
     <title>Finance and Administration Manager</title>
@@ -16,7 +15,6 @@
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 1</firstname>
     <lastname>Potocka 1</lastname>
     <title>Finance and Administration Manager</title>
@@ -32,7 +30,6 @@
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 2</firstname>
     <lastname>Potocka 2</lastname>
     <title>Finance and Administration Manager</title>
@@ -48,7 +45,6 @@
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 3</firstname>
     <lastname>Potocka 3</lastname>
     <title>Finance and Administration Manager</title>
@@ -64,7 +60,6 @@
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 4</firstname>
     <lastname>Potocka 4</lastname>
     <title>Finance and Administration Manager</title>
@@ -80,7 +75,6 @@
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
-    <id>2147483647</id>
     <firstname>Kamila 5</firstname>
     <lastname>Potocka 5</lastname>
     <title>Finance and Administration Manager</title>
