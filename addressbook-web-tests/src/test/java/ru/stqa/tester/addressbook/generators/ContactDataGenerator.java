@@ -5,6 +5,7 @@ import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.tester.addressbook.model.ContactData;
 
@@ -53,7 +54,7 @@ public class ContactDataGenerator {
   }
 
   private void saveAsJson(List<ContactData> contacts, File file) throws IOException {
-    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
+    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();//
     String json = gson.toJson(contacts);
     Writer writer = new FileWriter(file);
     writer.write(json);
@@ -82,8 +83,9 @@ public class ContactDataGenerator {
 
   private List<ContactData> generateCounts(int count) {
     List<ContactData> contacts = new ArrayList<ContactData>();
-    File photo = new File("src/test/resources/obrazek.png");
+
     for (int i = 0; i < count; i++) {
+      File photo = new File("src/test/resources/obrazek.png");
       contacts.add(new ContactData().withFirstname(String.format("Kamila %s", i)).withLastname(String.format("Potocka %s", i)).withPhoto(photo)
               .withTitle(String.format("Finance and Administration Manager")).withCompany(String.format("Niko")).withCompanyAddress(String.format("Prosta 12, 00-850 Warszawa"))
               .withHomePhone(String.format("22511896%s", i)).withMobilePhone(String.format("50269899%s", i)).withWorkPhone(String.format("22589499%s", i))

@@ -174,6 +174,7 @@ public class ContactData {
   public String getGroup() {return group;}
 
   public String getName() {return name;}
+
   public File getPhoto() {return photo;}
 
   @Override
