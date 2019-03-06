@@ -1,0 +1,98 @@
+<list>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 0</firstname>
+    <lastname>Potocka 0</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118960</homePhone>
+    <mobilePhone>502698990</mobilePhone>
+    <workPhone>225894990</workPhone>
+    <email>kamila.potocka0@niko.com</email>
+    <email2>kamila.potocka0@gmail.com</email2>
+    <email3>kamila.potocka0@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 1</firstname>
+    <lastname>Potocka 1</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118961</homePhone>
+    <mobilePhone>502698991</mobilePhone>
+    <workPhone>225894991</workPhone>
+    <email>kamila.potocka1@niko.com</email>
+    <email2>kamila.potocka1@gmail.com</email2>
+    <email3>kamila.potocka1@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 2</firstname>
+    <lastname>Potocka 2</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118962</homePhone>
+    <mobilePhone>502698992</mobilePhone>
+    <workPhone>225894992</workPhone>
+    <email>kamila.potocka2@niko.com</email>
+    <email2>kamila.potocka2@gmail.com</email2>
+    <email3>kamila.potocka2@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 3</firstname>
+    <lastname>Potocka 3</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118963</homePhone>
+    <mobilePhone>502698993</mobilePhone>
+    <workPhone>225894993</workPhone>
+    <email>kamila.potocka3@niko.com</email>
+    <email2>kamila.potocka3@gmail.com</email2>
+    <email3>kamila.potocka3@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 4</firstname>
+    <lastname>Potocka 4</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118964</homePhone>
+    <mobilePhone>502698994</mobilePhone>
+    <workPhone>225894994</workPhone>
+    <email>kamila.potocka4@niko.com</email>
+    <email2>kamila.potocka4@gmail.com</email2>
+    <email3>kamila.potocka4@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <id>2147483647</id>
+    <firstname>Kamila 5</firstname>
+    <lastname>Potocka 5</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118965</homePhone>
+    <mobilePhone>502698995</mobilePhone>
+    <workPhone>225894995</workPhone>
+    <email>kamila.potocka5@niko.com</email>
+    <email2>kamila.potocka5@gmail.com</email2>
+    <email3>kamila.potocka5@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+</list>
