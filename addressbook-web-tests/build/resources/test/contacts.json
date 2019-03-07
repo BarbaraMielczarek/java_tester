@@ -1,0 +1,32 @@
+[
+  {
+    "firstname": "Kamila 0",
+    "lastname": "Potocka 0",
+    "title": "Finance and Administration Manager",
+    "company": "Niko",
+    "companyAddress": "Prosta 12, 00-850 Warszawa",
+    "homePhone": "225118960",
+    "mobilePhone": "502698990",
+    "workPhone": "225894990",
+    "email": "kamila.potocka0@niko.com",
+    "email2": "kamila.potocka0@gmail.com",
+    "email3": "kamila.potocka0@onet.com",
+    "group": "[none]",
+    "photo": {}
+  },
+  {
+    "firstname": "Kamila 1",
+    "lastname": "Potocka 1",
+    "title": "Finance and Administration Manager",
+    "company": "Niko",
+    "companyAddress": "Prosta 12, 00-850 Warszawa",
+    "homePhone": "225118961",
+    "mobilePhone": "502698991",
+    "workPhone": "225894991",
+    "email": "kamila.potocka1@niko.com",
+    "email2": "kamila.potocka1@gmail.com",
+    "email3": "kamila.potocka1@onet.com",
+    "group": "[none]",
+    "photo": {}
+  }
+]

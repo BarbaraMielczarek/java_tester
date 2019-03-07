@@ -1,0 +1,32 @@
+<list>
+  <contact>
+    <firstname>Kamila 0</firstname>
+    <lastname>Potocka 0</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118960</homePhone>
+    <mobilePhone>502698990</mobilePhone>
+    <workPhone>225894990</workPhone>
+    <email>kamila.potocka0@niko.com</email>
+    <email2>kamila.potocka0@gmail.com</email2>
+    <email3>kamila.potocka0@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+  <contact>
+    <firstname>Kamila 1</firstname>
+    <lastname>Potocka 1</lastname>
+    <title>Finance and Administration Manager</title>
+    <company>Niko</company>
+    <companyAddress>Prosta 12, 00-850 Warszawa</companyAddress>
+    <homePhone>225118961</homePhone>
+    <mobilePhone>502698991</mobilePhone>
+    <workPhone>225894991</workPhone>
+    <email>kamila.potocka1@niko.com</email>
+    <email2>kamila.potocka1@gmail.com</email2>
+    <email3>kamila.potocka1@onet.com</email3>
+    <group>[none]</group>
+    <photo>src\test\resources\obrazek.png</photo>
+  </contact>
+</list>
