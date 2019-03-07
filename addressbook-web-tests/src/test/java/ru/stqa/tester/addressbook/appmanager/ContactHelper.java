@@ -134,12 +134,17 @@ public class ContactHelper extends BaseHelper {
     String home = wd.findElement(By.name("home")).getAttribute("value");
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
+   /* initAttachFileById(contact.getPhoto());*/
     wd.navigate().back();
     return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withPhoto(contact.getPhoto()).withCompany(company).withTitle(title).withCompanyAddress(address)
             .withEmail(email).withEmail2(email2).withEmail3(email3)
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
   }
 
+ /* private void initAttachFileById(File file) {
+    wd.findElement(By.xpath("//input[@name='photo']")).sendKeys(file.getAbsolutePath());
+  }
+*/
 
   private void initContactModificationById(int id) {
     WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));

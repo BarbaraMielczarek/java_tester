@@ -5,7 +5,6 @@ import com.beust.jcommander.Parameter;
 import com.beust.jcommander.ParameterException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.XStream;
 import ru.stqa.tester.addressbook.model.ContactData;
 
@@ -56,29 +55,29 @@ public class ContactDataGenerator {
   private void saveAsJson(List<ContactData> contacts, File file) throws IOException {
     Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();//
     String json = gson.toJson(contacts);
-    Writer writer = new FileWriter(file);
-    writer.write(json);
-    writer.close();
+    try (Writer writer = new FileWriter(file)) {
+      writer.write(json);
+    }
   }
 
   private void saveAsXml(List<ContactData> contacts, File file) throws IOException {
     XStream xstream = new XStream();
     xstream.processAnnotations(ContactData.class);
     String xml = xstream.toXML(contacts);
-    Writer writer = new FileWriter(file);
-    writer.write(xml);
-    writer.close();
+    try (Writer writer = new FileWriter(file)) {
+      writer.write(xml);
+    }
   }
 
   private void saveAsCsv(List<ContactData> contacts, File file) throws IOException {
-    Writer writer = new FileWriter(file);
-    for (ContactData contact : contacts) {
-      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(), contact.getPhoto(),
-              contact.getTitle(), contact.getCompany(), contact.getCompanyAddress(),
-              contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
-              contact.getEmail(), contact.getEmail2(), contact.getEmail3(), contact.getGroup()));
+    try (Writer writer = new FileWriter(file)) {
+      for (ContactData contact : contacts) {
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(), contact.getPhoto(),
+                contact.getTitle(), contact.getCompany(), contact.getCompanyAddress(),
+                contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
+                contact.getEmail(), contact.getEmail2(), contact.getEmail3(), contact.getGroup()));
+      }
     }
-    writer.close();
   }
 
   private List<ContactData> generateCounts(int count) {
