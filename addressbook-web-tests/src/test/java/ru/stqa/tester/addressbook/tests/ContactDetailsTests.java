@@ -8,7 +8,6 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -26,7 +25,7 @@ public class ContactDetailsTests extends TestBase {
     }
   }
 
-  @Test (enabled = false)
+  @Test(enabled = false)
   public void testContactDetails() {
     ContactData contact = app.contact().all().iterator().next();
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
@@ -43,13 +42,12 @@ public class ContactDetailsTests extends TestBase {
 
   private String margePhonesForDetails(ContactData contact) {
     return Arrays.asList(contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone())
-            .stream().filter((p) -> !p.equals("")).collect(joining("\n"));
+            .stream().filter((p) -> !p.equals("")).map(ContactPhoneEmailAddressTests::cleaned).collect(Collectors.joining("\n"));
   }
 
   private String margeEmails(ContactData contact) {
     return Arrays.asList(contact.getEmail(), contact.getEmail2(), contact.getEmail3())
-            .stream().filter((t) -> !t.equals(""))
-            .map(ContactPhoneEmailAddressTests::cleaned).collect(joining("\n"));
+            .stream().filter((t) -> !t.equals("")).collect(Collectors.joining("\n"));
   }
 
   private String margeDetails(ContactData contact) {
@@ -57,7 +55,7 @@ public class ContactDetailsTests extends TestBase {
             .stream().filter((d) -> !d.equals("")).collect(Collectors.joining("\n\n"));
   }
 
-  public String cleanedPhones (String name){
+  public String cleanedPhones(String name) {
     return name.replaceAll("[A-Z]: ", "");
   }
 
