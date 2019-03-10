@@ -84,8 +84,8 @@ public class ContactDataGenerator {
     List<ContactData> contacts = new ArrayList<ContactData>();
 
     for (int i = 0; i < count; i++) {
-      File photo = new File("src/test/resources/obrazek.png");
-      contacts.add(new ContactData().withFirstname(String.format("Kamila %s", i)).withLastname(String.format("Potocka %s", i)).withPhoto(photo)
+      //File photo = new File("src/test/resources/obrazek.png");
+      contacts.add(new ContactData().withFirstname(String.format("Kamila %s", i)).withLastname(String.format("Potocka %s", i)).withPhoto(new File(String.format("src/test/resources/obrazek.png")))
               .withTitle(String.format("Finance and Administration Manager")).withCompany(String.format("Niko")).withCompanyAddress(String.format("Prosta 12, 00-850 Warszawa"))
               .withHomePhone(String.format("22511896%s", i)).withMobilePhone(String.format("50269899%s", i)).withWorkPhone(String.format("22589499%s", i))
               .withEmail(String.format("kamila.potocka%s@niko.com", i)).withEmail2(String.format("kamila.potocka%s@gmail.com", i)).withEmail3(String.format("kamila.potocka%s@onet.com", i))

@@ -58,11 +58,6 @@ public class ContactCreationTests extends TestBase {
   public void testContactCreation(ContactData contact) throws Exception {
     app.goTo().homePage();
     Contacts before = app.contact().all();
-    /*File photo = new File("src/test/resources/obrazek.png");
-    ContactData contact = new ContactData()
-            .withFirstname("Kamila").withLastname("Potocka").withPhoto(photo).withCompany("Niko").withTitle("Finance and Administration Manager")
-            .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990")
-            .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("[none]");*/
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size() + 1);
     Contacts after = app.contact().all();
