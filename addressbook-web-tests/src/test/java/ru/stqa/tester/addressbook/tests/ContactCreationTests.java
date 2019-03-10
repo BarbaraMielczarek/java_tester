@@ -22,6 +22,7 @@ import static org.testng.Assert.assertEquals;
 
 public class ContactCreationTests extends TestBase {
 
+
   @DataProvider
   public Iterator<Object[]> validContactsFromXml() throws IOException {
     try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))) {

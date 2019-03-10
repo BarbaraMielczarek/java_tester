@@ -24,3 +24,4 @@ sandbox/out/production/classes/ru/stqa/tester/sandbox/MyFirstProgram.class
 sandbox/out/production/classes/ru/stqa/tester/sandbox/Rectangle.class
 sandbox/out/production/classes/ru/stqa/tester/sandbox/MyFirstProgram.class
 sandbox/.idea/workspace.xml
+*.log
