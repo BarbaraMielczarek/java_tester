@@ -8,7 +8,6 @@ import org.testng.Assert;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
 
-import java.io.File;
 import java.util.List;
 
 public class ContactHelper extends BaseHelper {
@@ -35,7 +34,6 @@ public class ContactHelper extends BaseHelper {
     type(By.name("email2"), contactData.getEmail());
     type(By.name("email3"), contactData.getEmail());
     attach(By.name("photo"), contactData.getPhoto());
-
 
     if (creation) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());

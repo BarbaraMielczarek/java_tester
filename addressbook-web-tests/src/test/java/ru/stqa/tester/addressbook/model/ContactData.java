@@ -39,10 +39,8 @@ public class ContactData {
   @Expose
   private String group;
   private String name;
-  @Expose
+  @XStreamOmitField
   private File photo;
-
-
 
 
   public ContactData withId(int id) {

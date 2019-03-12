@@ -25,7 +25,7 @@ public class ContactDetailsTests extends TestBase {
     }
   }
 
-  @Test(enabled = false)
+  @Test
   public void testContactDetails() {
     ContactData contact = app.contact().all().iterator().next();
     ContactData contactInfoFromEditForm = app.contact().infoFromEditForm(contact);
@@ -36,7 +36,7 @@ public class ContactDetailsTests extends TestBase {
 
 
   private String margeTitle(ContactData contact) {
-    return Arrays.asList((contact.getFirstname() + " " + contact.getLastname()).trim(), (contact.getPhoto().getAbsolutePath()), contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
+    return Arrays.asList((contact.getFirstname() + " " + contact.getLastname()).trim(), contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
             .stream().filter((n) -> !n.equals("")).collect(Collectors.joining("\n"));
   }
 
