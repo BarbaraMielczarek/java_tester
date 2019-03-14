@@ -84,6 +84,7 @@ public class ContactData {
   private String name;
 
   @XStreamOmitField
+  @Expose
   @Column(name = "photo")
   @Type(type = "text")
   private String photo;

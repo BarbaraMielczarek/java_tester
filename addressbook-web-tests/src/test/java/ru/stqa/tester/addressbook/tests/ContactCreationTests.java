@@ -55,21 +55,21 @@ public class ContactCreationTests extends TestBase {
     }
   }
 
-  @Test(dataProvider = "validContactsFromXml")
+  @Test(dataProvider = "validContactsFromJson")
   public void testContactCreation(ContactData contact) throws Exception {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size() + 1);
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
   }
 
   @Test
   public void testBadContactCreation() throws Exception {
+    Contacts before = app.db().contacts();
     app.goTo().homePage();
-    Contacts before = app.contact().all();
     File photo = new File("src/test/resources/obrazek.png");
     ContactData contact = new ContactData()
             .withFirstname("Kamila'").withLastname("Potocka").withPhoto(photo).withTitle("Finance and Administration Manager").withCompany("Niko")
@@ -77,7 +77,7 @@ public class ContactCreationTests extends TestBase {
             .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("[none]");
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size());
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
   }
 }

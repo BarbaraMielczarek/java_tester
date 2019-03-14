@@ -8,6 +8,7 @@ import org.testng.Assert;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
 
+import java.io.File;
 import java.util.List;
 
 public class ContactHelper extends BaseHelper {
@@ -132,9 +133,11 @@ public class ContactHelper extends BaseHelper {
     String home = wd.findElement(By.name("home")).getAttribute("value");
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
+    File photo = new File("src/test/resources/obrazek.png");
+
    /* initAttachFileById(contact.getPhoto());*/
     wd.navigate().back();
-    return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withPhoto(contact.getPhoto()).withCompany(company).withTitle(title).withCompanyAddress(address)
+    return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withPhoto(photo).withCompany(company).withTitle(title).withCompanyAddress(address)
             .withEmail(email).withEmail2(email2).withEmail3(email3)
             .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
   }

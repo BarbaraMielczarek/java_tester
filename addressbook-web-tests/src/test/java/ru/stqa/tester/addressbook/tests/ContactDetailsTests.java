@@ -35,8 +35,9 @@ public class ContactDetailsTests extends TestBase {
   }
 
 
+
   private String margeTitle(ContactData contact) {
-    return Arrays.asList((contact.getFirstname() + " " + contact.getLastname()).trim(), contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
+    return Arrays.asList((contact.getFirstname() + " " + contact.getLastname()).trim(),contact.getTitle(), contact.getCompany(), contact.getCompanyAddress())
             .stream().filter((n) -> !n.equals("")).collect(Collectors.joining("\n"));
   }
 
@@ -52,11 +53,12 @@ public class ContactDetailsTests extends TestBase {
 
   private String margeDetails(ContactData contact) {
     return Arrays.asList(margeTitle(contact), margePhonesForDetails(contact), margeEmails(contact))
-            .stream().filter((d) -> !d.equals("")).collect(Collectors.joining("\n\n"));
+            .stream().filter((d) -> !d.equals("")).collect(Collectors.joining("\n"));
   }
 
   public String cleanedPhones(String name) {
-    return name.replaceAll("[A-Z]: ", "");
+    return name.replaceAll("[A-Z]: ", "").replaceAll("\n\n", "\n");
   }
+
 
 }

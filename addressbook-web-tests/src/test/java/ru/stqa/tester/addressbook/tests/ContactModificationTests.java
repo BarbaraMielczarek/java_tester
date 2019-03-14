@@ -15,8 +15,8 @@ public class ContactModificationTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.goTo().homePage();
-    if (app.contact().all().size() == 0) {
+    if (app.db().contacts().size() == 0) {
+      app.goTo().homePage();
       File photo = new File("src/test/resources/obrazek.png");
       app.contact().create(new ContactData()
               .withFirstname("Kamila").withLastname("Potocka").withPhoto(photo).withTitle("Finance and Administration Manager").withCompany("Niko")
@@ -27,14 +27,16 @@ public class ContactModificationTests extends TestBase {
 
   @Test
   public void testContactModification() {
-    Contacts before = app.contact().all();
+    Contacts before = app.db().contacts();
     ContactData modifiedContact = before.iterator().next();
-    ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Marcin").withLastname("Widzew").withCompany("Niko SA").withTitle("Area Sales Manager")
+    File photo = new File("src/test/resources/obrazek.png");
+    ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Marcin").withLastname("Widzew").withPhoto(photo).withCompany("Niko SA").withTitle("Area Sales Manager")
             .withCompanyAddress("Prosta 25, 89-001 Warszawa").withHomePhone("225894990").withMobilePhone("502698900").withWorkPhone("225894990")
             .withEmail("marcin.widzew@niko.com").withEmail2("marcin.widzew@gmail.com").withGroup(null);
+    app.goTo().homePage();
     app.contact().modify(contact);
     assertEquals(app.contact().count(), before.size());
-    Contacts after = app.contact().all();
+    Contacts after = app.db().contacts();
     assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
   }
 }
