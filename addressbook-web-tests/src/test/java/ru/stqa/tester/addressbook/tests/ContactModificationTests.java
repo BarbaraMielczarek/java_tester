@@ -32,7 +32,7 @@ public class ContactModificationTests extends TestBase {
     File photo = new File("src/test/resources/obrazek.png");
     ContactData contact = new ContactData().withId(modifiedContact.getId()).withFirstname("Marcin").withLastname("Widzew").withPhoto(photo).withCompany("Niko SA").withTitle("Area Sales Manager")
             .withCompanyAddress("Prosta 25, 89-001 Warszawa").withHomePhone("225894990").withMobilePhone("502698900").withWorkPhone("225894990")
-            .withEmail("marcin.widzew@niko.com").withEmail2("marcin.widzew@gmail.com").withGroup(null);
+            .withEmail("marcin.widzew@niko.com").withEmail2("marcin.widzew@gmail.com").withEmail3("marcin.widzew@op.pl").withGroup(null);
     app.goTo().homePage();
     app.contact().modify(contact);
     assertEquals(app.contact().count(), before.size());

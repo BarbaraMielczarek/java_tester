@@ -83,7 +83,7 @@ public class ContactData {
   @Transient
   private String name;
 
-  @XStreamOmitField
+  //@XStreamOmitField
   @Expose
   @Column(name = "photo")
   @Type(type = "text")
@@ -218,7 +218,13 @@ public class ContactData {
 
   public String getName() {return name;}
 
-  public File getPhoto() {return new File(photo);}
+
+  public File getPhoto() {
+    if(photo == null){
+      return null;
+    }
+      return new File(photo);
+    }
 
   @Override
   public String toString() {
