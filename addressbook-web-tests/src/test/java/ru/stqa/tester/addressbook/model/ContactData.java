@@ -206,9 +206,7 @@ public class ContactData {
 
   public String getAllPhones() {return allPhones;}
 
-  public String getEmail() {
-    return email;
-  }
+  public String getEmail() {return email;}
 
   public String getEmail2() {return email2;}
 
@@ -238,15 +236,20 @@ public class ContactData {
     ContactData that = (ContactData) o;
     return id == that.id &&
             Objects.equals(firstname, that.firstname) &&
-            Objects.equals(lastname, that.lastname);
+            Objects.equals(lastname, that.lastname) &&
+            Objects.equals(title, that.title) &&
+            Objects.equals(company, that.company) &&
+            Objects.equals(companyAddress, that.companyAddress) &&
+            Objects.equals(homePhone, that.homePhone) &&
+            Objects.equals(mobilePhone, that.mobilePhone) &&
+            Objects.equals(workPhone, that.workPhone) &&
+            Objects.equals(email, that.email) &&
+            Objects.equals(email2, that.email2) &&
+            Objects.equals(email3, that.email3);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstname, lastname);
+    return Objects.hash(id, firstname, lastname, title, company, companyAddress, homePhone, mobilePhone, workPhone, email, email2, email3);
   }
-
-
-
-
 }
