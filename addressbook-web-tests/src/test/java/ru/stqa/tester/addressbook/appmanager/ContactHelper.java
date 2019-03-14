@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
+import ru.stqa.tester.addressbook.model.Groups;
 
 import java.io.File;
 import java.util.List;
@@ -37,7 +38,9 @@ public class ContactHelper extends BaseHelper {
     attach(By.name("photo"), contactData.getPhoto());
 
     if (creation) {
-      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+      if(contactData.getGroups().size() == 1);
+      Assert.assertTrue(contactData.getGroups().size()==1);
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
     } else Assert.assertFalse(isElementPresent(By.name("new_group")));
   }
 
@@ -134,8 +137,7 @@ public class ContactHelper extends BaseHelper {
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
     File photo = new File("src/test/resources/obrazek.png");
-
-   /* initAttachFileById(contact.getPhoto());*/
+    /* initAttachFileById(contact.getPhoto());*/
     wd.navigate().back();
     return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname).withPhoto(photo).withCompany(company).withTitle(title).withCompanyAddress(address)
             .withEmail(email).withEmail2(email2).withEmail3(email3)

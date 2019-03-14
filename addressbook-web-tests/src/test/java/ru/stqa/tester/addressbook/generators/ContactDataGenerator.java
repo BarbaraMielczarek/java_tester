@@ -75,7 +75,7 @@ public class ContactDataGenerator {
         writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(), contact.getPhoto(),
                 contact.getTitle(), contact.getCompany(), contact.getCompanyAddress(),
                 contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(),
-                contact.getEmail(), contact.getEmail2(), contact.getEmail3(), contact.getGroup()));
+                contact.getEmail(), contact.getEmail2(), contact.getEmail3()));
       }
     }
   }
@@ -87,8 +87,7 @@ public class ContactDataGenerator {
       contacts.add(new ContactData().withFirstname(String.format("Kamila %s", i)).withLastname(String.format("Potocka %s", i)).withPhoto(new File(String.format("src/test/resources/obrazek.png")))
               .withTitle(String.format("Finance and Administration Manager")).withCompany(String.format("Niko")).withCompanyAddress(String.format("Prosta 12, 00-850 Warszawa"))
               .withHomePhone(String.format("22511896%s", i)).withMobilePhone(String.format("50269899%s", i)).withWorkPhone(String.format("22589499%s", i))
-              .withEmail(String.format("kamila.potocka%s@niko.com", i)).withEmail2(String.format("kamila.potocka%s@gmail.com", i)).withEmail3(String.format("kamila.potocka%s@onet.com", i))
-              .withGroup(String.format("[none]")));
+              .withEmail(String.format("kamila.potocka%s@niko.com", i)).withEmail2(String.format("kamila.potocka%s@gmail.com", i)).withEmail3(String.format("kamila.potocka%s@onet.com", i)));
     }
     return contacts;
   }

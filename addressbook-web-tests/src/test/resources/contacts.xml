@@ -11,7 +11,6 @@
     <email>kamila.potocka0@niko.com</email>
     <email2>kamila.potocka0@gmail.com</email2>
     <email3>kamila.potocka0@onet.com</email3>
-    <group>[none]</group>
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
   <contact>
@@ -26,7 +25,6 @@
     <email>kamila.potocka1@niko.com</email>
     <email2>kamila.potocka1@gmail.com</email2>
     <email3>kamila.potocka1@onet.com</email3>
-    <group>[none]</group>
     <photo>src\test\resources\obrazek.png</photo>
   </contact>
 </list>

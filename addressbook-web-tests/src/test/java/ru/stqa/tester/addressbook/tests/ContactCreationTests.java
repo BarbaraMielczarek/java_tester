@@ -3,10 +3,13 @@ package ru.stqa.tester.addressbook.tests;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.stqa.tester.addressbook.model.ContactData;
 import ru.stqa.tester.addressbook.model.Contacts;
+import ru.stqa.tester.addressbook.model.GroupData;
+import ru.stqa.tester.addressbook.model.Groups;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -55,6 +58,14 @@ public class ContactCreationTests extends TestBase {
     }
   }
 
+  @BeforeMethod
+  public void ensurePreconditions() {
+    if (app.db().groups().size() == 0) {
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("test1").withHeader("test1"));
+    }
+  }
+
   @Test(dataProvider = "validContactsFromXml")
   public void testContactCreation(ContactData contact) throws Exception {
     Contacts before = app.db().contacts();
@@ -64,20 +75,23 @@ public class ContactCreationTests extends TestBase {
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(
             before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
+    verifyContactListInUi();
   }
 
   @Test
   public void testBadContactCreation() throws Exception {
+    Groups groups = app.db().groups();
     Contacts before = app.db().contacts();
     app.goTo().homePage();
     File photo = new File("src/test/resources/obrazek.png");
     ContactData contact = new ContactData()
             .withFirstname("Kamila'").withLastname("Potocka").withPhoto(photo).withTitle("Finance and Administration Manager").withCompany("Niko")
             .withCompanyAddress("Prosta 12, 00-850 Warszawa").withHomePhone("225118967").withMobilePhone("502698990").withWorkPhone("225894990")
-            .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").withGroup("[none]");
+            .withEmail("kamila.potocka@niko.com").withEmail2("kamila.potocka@gmail.com").inGroup(groups.iterator().next());
     app.contact().create(contact, true);
     assertEquals(app.contact().count(), before.size());
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before));
+    verifyContactListInUi();
   }
 }

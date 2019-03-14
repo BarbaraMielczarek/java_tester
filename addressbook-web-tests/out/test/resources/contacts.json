@@ -11,7 +11,7 @@
     "email": "kamila.potocka0@niko.com",
     "email2": "kamila.potocka0@gmail.com",
     "email3": "kamila.potocka0@onet.com",
-    "group": "[none]"
+    "photo": "src\\test\\resources\\obrazek.png"
   },
   {
     "firstname": "Kamila 1",
@@ -25,6 +25,6 @@
     "email": "kamila.potocka1@niko.com",
     "email2": "kamila.potocka1@gmail.com",
     "email3": "kamila.potocka1@onet.com",
-    "group": "[none]"
+    "photo": "src\\test\\resources\\obrazek.png"
   }
 ]
