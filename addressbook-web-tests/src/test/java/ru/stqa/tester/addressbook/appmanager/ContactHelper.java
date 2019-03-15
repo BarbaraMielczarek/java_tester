@@ -47,6 +47,7 @@ public class ContactHelper extends BaseHelper {
     }
   }
 
+
   private void selectContactById(int id) {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }

@@ -96,6 +96,8 @@ public class ContactData {
     return new Groups(groups);
   }
 
+
+
   public ContactData withId(int id) {
     this.id = id;
     return this;
@@ -227,7 +229,6 @@ public class ContactData {
     }
 
 
-
   @Override
   public String toString() {
     return "ContactData{" +
@@ -263,6 +264,10 @@ public class ContactData {
 
   public ContactData inGroup(GroupData group) {
     groups.add(group);
+    return this;
+  }
+  private Object readResolve() {
+    groups = new HashSet<GroupData>();
     return this;
   }
 }
