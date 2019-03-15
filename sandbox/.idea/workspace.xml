@@ -108,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/appmanager/ContactHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-811">
-              <caret line="54" column="48" lean-forward="true" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+            <state relative-caret-position="377">
+              <caret line="36" column="53" lean-forward="true" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1864#1865#0" expanded="true" />
@@ -127,8 +127,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/tests/ContactDetailsTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+            <state relative-caret-position="528">
+              <caret line="65" column="106" selection-start-line="65" selection-start-column="106" selection-end-line="65" selection-end-column="106" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -328,7 +328,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552649986427" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552651318417" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/../addressbook-web-tests" />
@@ -778,34 +778,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactCreationTests - 2019.03.15 at 01h 26m 19s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactCreationTests - 2019.03.15 at 12h 07m 10s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactCreationTests - 2019.03.15 at 12h 20m 35s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactCreationTests - 2019.03.15 at 12h 21m 55s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactCreationTests - 2019.03.15 at 12h 25m 30s.xml">
-      <configuration name="ContactCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ru_stqa_tester_addressbook_tests - 2019.03.15 at 12h 26m 49s.xml">
-      <configuration name="ru.stqa.tester.addressbook.tests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 30m 50s.xml">
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 50m 32s.xml">
       <configuration name="ContactDetailsTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 31m 50s.xml">
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 51m 43s.xml">
       <configuration name="ContactDetailsTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 35m 26s.xml">
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 52m 33s.xml">
       <configuration name="ContactDetailsTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 38m 02s.xml">
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 53m 03s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 53m 39s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 55m 09s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 55m 48s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 57m 14s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 57m 58s.xml">
+      <configuration name="ContactDetailsTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ContactDetailsTests - 2019.03.15 at 12h 58m 48s.xml">
       <configuration name="ContactDetailsTests" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1288,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/appmanager/ContactHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-811">
-          <caret line="54" column="48" lean-forward="true" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+        <state relative-caret-position="377">
+          <caret line="36" column="53" lean-forward="true" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1864#1865#0" expanded="true" />
@@ -1305,8 +1305,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../addressbook-web-tests/src/test/java/ru/stqa/tester/addressbook/tests/ContactDetailsTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="528">
+          <caret line="65" column="106" selection-start-line="65" selection-start-column="106" selection-end-line="65" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
