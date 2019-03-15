@@ -92,6 +92,10 @@ public class ContactData {
           joinColumns = @JoinColumn (name = "id"), inverseJoinColumns = @JoinColumn (name = "group_id"))
   private Set<GroupData> groups = new HashSet<GroupData>();
 
+  public Groups getGroups() {
+    return new Groups(groups);
+  }
+
   public ContactData withId(int id) {
     this.id = id;
     return this;
@@ -222,9 +226,7 @@ public class ContactData {
       return new File(photo);
     }
 
-  public Groups getGroups() {
-    return new Groups(groups);
-  }
+
 
   @Override
   public String toString() {
