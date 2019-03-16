@@ -41,14 +41,14 @@ public class ContactHelper extends BaseHelper {
       if (contactData.getGroups().size() > 0) {
         Assert.assertTrue(contactData.getGroups().size() == 1);
         new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
-      } else {
+      }
+    }else {
         Assert.assertFalse(isElementPresent(By.name("new_group")));
       }
     }
-  }
 
 
-  private void selectContactById(int id) {
+    private void selectContactById(int id) {
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
 
