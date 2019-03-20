@@ -7,7 +7,9 @@ import javax.mail.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class JamesHelper {
 
@@ -35,9 +37,9 @@ public class JamesHelper {
     return result.trim().equals("User " + name + " exist");
   }
 
-  public void createUser(String name, String password) {
+  public void createUser(String name, String passwd) {
     initTelnetSession();
-    write("adduser " + name + " " + password);
+    write("adduser " + name + " " + passwd);
     String result = readUntil("User " + name + " added");
     closeTelnetSession();
   }
@@ -53,33 +55,33 @@ public class JamesHelper {
     mailserver = app.getProperty("mailserver.host");
     int port = Integer.parseInt(app.getProperty("mailserver.port"));
     String login = app.getProperty("mailserver.adminlogin");
-    String password = app.getProperty("mailserver.password");
+    String password = app.getProperty("mailserver.adminpassword");
+
     try {
       telnet.connect(mailserver, port);
       in = telnet.getInputStream();
       out = new PrintStream(telnet.getOutputStream());
+
     } catch (IOException e) {
       e.printStackTrace();
     }
 
     //Don't know why it doesn't allow login at the first attempt
-    readUntil("Login id: ");
+    readUntil("Login id:");
     write("");
     readUntil("Password:");
     write(password);
 
     //Second login attempt, must be successful
-    readUntil("Login id: ");
+    readUntil("Login id:");
     write("");
     readUntil("Password:");
     write(password);
 
     //Read velcome messge
-    readUntil("welcome " + login + ". Help for a list of commands");
+    readUntil("Welcome " + login + ". Help for a list of commands");
 
   }
-
-
 
   private String readUntil(String pattern) {
     try {
@@ -88,7 +90,7 @@ public class JamesHelper {
 
       char ch = (char) in.read();
       while (true){
-        System.out.println(ch);
+        System.out.print(ch);
         sb.append(ch);
         if(ch == lastChar){
           if(sb.toString().endsWith(pattern)){
@@ -97,7 +99,7 @@ public class JamesHelper {
         }
         ch = (char) in.read();
       }
-    } catch (IOException e) {
+    } catch (Exception e) {
       e.printStackTrace();
     }
     return null;
@@ -131,7 +133,6 @@ public class JamesHelper {
     Folder folder = store.getDefaultFolder().getFolder("INBOX");
     folder.open(Folder.READ_WRITE);
     return folder;
-
   }
 
   private void closeFolder(Folder folder) throws MessagingException {
@@ -139,9 +140,38 @@ public class JamesHelper {
     store.close();
   }
 
+  public List<MailMessage> waitForMail(String username, String password, long timeout) throws MessagingException{
+    long now = System.currentTimeMillis();
+    while (System.currentTimeMillis() < now + timeout) {
+      List<MailMessage> allMail = getAllMail(username, password);
+      if(allMail.size() > 0) {
+        return  allMail;
+      }
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+    }
+    throw new Error ("No mail :(");
+  }
 
+  private List<MailMessage> getAllMail(String username, String password) throws MessagingException {
+    Folder inbox = openInbox(username, password);
+    List<MailMessage> messages = Arrays.asList(inbox.getMessages()). stream().map((m) -> toModelMail(m)).collect(Collectors.toList());
+    closeFolder(inbox);
+    return messages;
+  }
 
-  public List<MailMessage> waitForMail(String user, String password, int i) {
-    return null;
+  public static MailMessage toModelMail (Message m){
+    try {
+      return new MailMessage(m.getAllRecipients()[0].toString(), (String) m.getContent());
+    } catch (MessagingException e) {
+      e.printStackTrace();
+      return  null;
+    } catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
   }
 }
