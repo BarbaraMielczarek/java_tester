@@ -178,4 +178,32 @@ public class ContactHelper extends BaseHelper {
     List<WebElement> cells = row.findElements(By.tagName("td"));
     cells.get(6).findElement(By.tagName("a")).click();
   }
+
+
+
+  public void cuurentGroupPage()
+  {
+    wd.findElement(By.name("group")).click();
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText("test 1");
+    wd.findElement(By.xpath("//option[@value='65']")).click();
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
+  }
+  public void addContactToGroup (ContactData contact)
+  {
+
+    selectContactById(contact.getId());
+    chooseGroupAndAddContact ();
+
+  }
+
+  public void chooseGroupAndAddContact ()
+  {
+
+    wd.findElement(By.name("to_group")).click();
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText("test 1");
+    wd.findElement(By.xpath("(//option[@value='71'])[2]")).click();
+    wd.findElement(By.name("add")).click();
+    wd.findElement(By.linkText("group page \"test 1\"")).click();
+  }
+
 }
