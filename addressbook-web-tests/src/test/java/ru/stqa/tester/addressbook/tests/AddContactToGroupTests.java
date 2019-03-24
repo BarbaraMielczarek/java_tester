@@ -35,7 +35,6 @@ public class AddContactToGroupTests extends TestBase {
   @Test
   public void addContactToGroupTest ()
   {
-
     app.contact().cuurentGroupPage();
     Contacts before = app.db().contacts();
     ContactData contactAddedToGroup = before.iterator().next();
@@ -44,8 +43,6 @@ public class AddContactToGroupTests extends TestBase {
     assertThat(app.contact().count(), equalTo(before.size()+1));
     Contacts after = app.db().contacts();
     assertThat(after, equalTo(before.without(contactAddedToGroup)));
-
-
   }
 
 }
