@@ -1,8 +1,8 @@
 package ru.stqa.tester.soap;
 
 
-import net.webservicex.GeoIP;
-import net.webservicex.GeoIPService;
+import com.lavasoft.GeoIPService;
+import com.lavasoft.GetCountryISO2ByName;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -10,10 +10,11 @@ import static org.testng.Assert.assertEquals;
 
 public class GeoIpServiceTests {
 
-  @Test (enabled = false)
+  @Test
   public void testMyIp() {
-    GeoIP geoIP = new GeoIPService().getGeoIPServiceSoap12().getGeoIP("83.7.176.216");
-    assertEquals(geoIP.getCountryCode(), "PL");
+    GetCountryISO2ByName ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation20("83.7.176.216");
+    assertEquals(ipLocation.getCountryName(), "PL");
+
 
   }
 }
