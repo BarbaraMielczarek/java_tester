@@ -21,8 +21,9 @@ public class ApplicationManager {
   private FtpHelper ftp;
   private MailHelper mailHelper;
   private JamesHelper jamesHelper;
-  private PasswordHelper passwordHelper;
+  private ChangePasswordHelper changePasswordHelper;
   private SoapHelper soapHelper;
+  private DbHelper dbHelper;
 
 
   public ApplicationManager(String browser) {
@@ -94,11 +95,11 @@ public class ApplicationManager {
     return jamesHelper;
   }
 
-  public PasswordHelper change() {
-    if (passwordHelper == null) {
-      passwordHelper = new PasswordHelper(this);
+  public ChangePasswordHelper changePassword() {
+    if (changePasswordHelper == null) {
+      changePasswordHelper = new ChangePasswordHelper(this);
     }
-    return passwordHelper;
+    return changePasswordHelper;
   }
 
   public SoapHelper soap() {
@@ -106,5 +107,11 @@ public class ApplicationManager {
       soapHelper = new SoapHelper(this);
     }
     return soapHelper;
+  }
+  public DbHelper db() {
+    if (dbHelper == null) {
+      dbHelper = new DbHelper();
+    }
+    return dbHelper;
   }
 }
