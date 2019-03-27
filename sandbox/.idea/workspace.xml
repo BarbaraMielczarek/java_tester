@@ -224,8 +224,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/tester/mantis/tests/SoapTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="292">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -466,7 +466,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553724803007" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553725061609" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/../addressbook-web-tests" />
@@ -922,12 +922,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChangePasswordTests - 2019.03.27 at 22h 16m 29s.xml">
-      <configuration name="ChangePasswordTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ChangePasswordTests - 2019.03.27 at 22h 29m 53s.xml">
-      <configuration name="ChangePasswordTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ChangePasswordTests - 2019.03.27 at 22h 31m 25s.xml">
       <configuration name="ChangePasswordTests" configurationId="TestNG" />
     </history-entry>
@@ -952,6 +946,12 @@
     <history-entry file="SoapTests - 2019.03.27 at 23h 01m 45s.xml">
       <configuration name="SoapTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="SoapTests - 2019.03.27 at 23h 11m 45s.xml">
+      <configuration name="SoapTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="SoapTests - 2019.03.27 at 23h 11m 59s.xml">
+      <configuration name="SoapTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -973,10 +973,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5003897" side_tool="true" weight="0.19363818" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49961028" visible="true" weight="0.2" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49961028" visible="true" weight="0.2" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289166" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49821073" visible="true" weight="0.47778645" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49821073" visible="true" weight="0.47778645" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990647" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1503,8 +1503,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mantis-tests/src/test/java/ru/stqa/tester/mantis/tests/SoapTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state relative-caret-position="292">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
