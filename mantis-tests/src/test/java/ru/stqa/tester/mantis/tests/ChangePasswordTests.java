@@ -23,7 +23,7 @@ public class ChangePasswordTests extends TestBase {
     app.mail().start();
   }
 
-  @Test
+  @Test(enabled = false)
   public void testChangePassword() throws IOException, MessagingException {
     String admin = app.getProperty("web.adminLogin");
     String admin_password = app.getProperty("web.adminPassword");
