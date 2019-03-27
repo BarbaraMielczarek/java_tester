@@ -22,6 +22,7 @@ public class ApplicationManager {
   private MailHelper mailHelper;
   private JamesHelper jamesHelper;
   private PasswordHelper passwordHelper;
+  private SoapHelper soapHelper;
 
 
   public ApplicationManager(String browser) {
@@ -35,12 +36,12 @@ public class ApplicationManager {
   }
 
   public void stop() {
-    if (wd != null){
+    if (wd != null) {
       wd.quit();
     }
   }
 
-  public  HttpSession newSession(){
+  public HttpSession newSession() {
     return new HttpSession(this);
   }
 
@@ -49,21 +50,21 @@ public class ApplicationManager {
   }
 
   public RegistrationHelper registration() {
-    if ( registrationHelper == null){
-      registrationHelper =  new RegistrationHelper(this);
+    if (registrationHelper == null) {
+      registrationHelper = new RegistrationHelper(this);
     }
     return registrationHelper;
   }
 
-  public FtpHelper ftp(){
-    if (ftp == null){
+  public FtpHelper ftp() {
+    if (ftp == null) {
       ftp = new FtpHelper(this);
     }
     return ftp;
   }
 
   public WebDriver getDriver() {
-    if (wd == null){
+    if (wd == null) {
       if (browser.equals(BrowserType.CHROME)) {
         wd = new ChromeDriver();
       } else if (browser.equals(BrowserType.FIREFOX)) {
@@ -78,24 +79,32 @@ public class ApplicationManager {
     return wd;
   }
 
-  public  MailHelper mail(){
-    if (mailHelper == null){
+  public MailHelper mail() {
+    if (mailHelper == null) {
       mailHelper = new MailHelper(this);
     }
     return mailHelper;
 
   }
-  public  JamesHelper james(){
-    if(jamesHelper == null){
+
+  public JamesHelper james() {
+    if (jamesHelper == null) {
       jamesHelper = new JamesHelper(this);
     }
     return jamesHelper;
   }
 
-  public PasswordHelper change(){
-    if (passwordHelper == null){
+  public PasswordHelper change() {
+    if (passwordHelper == null) {
       passwordHelper = new PasswordHelper(this);
     }
-    return  passwordHelper;
+    return passwordHelper;
+  }
+
+  public SoapHelper soap() {
+    if (soapHelper == null) {
+      soapHelper = new SoapHelper(this);
+    }
+    return soapHelper;
   }
 }

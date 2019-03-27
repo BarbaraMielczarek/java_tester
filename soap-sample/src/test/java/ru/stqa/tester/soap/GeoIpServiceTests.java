@@ -10,7 +10,7 @@ import static org.testng.Assert.assertEquals;
 
 public class GeoIpServiceTests {
 
-  @Test
+  @Test (enabled = false)
   public void testMyIp() {
     GetCountryISO2ByName ipLocation = new GeoIPService().getGeoIPServiceSoap12().getIpLocation20("83.7.176.216");
     assertEquals(ipLocation.getCountryName(), "PL");
