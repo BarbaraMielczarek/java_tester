@@ -18,7 +18,7 @@ public class UserData {
   private int id;
 
   @Column(name = "username")
-  @Type(type = "text")
+  @Type(type = "string")
   private String username;
 
   @Column(name = "email")
