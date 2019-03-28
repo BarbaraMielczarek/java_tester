@@ -22,7 +22,7 @@ public class UserData {
   private String username;
 
   @Column(name = "email")
-  @Type(type = "String")
+  @Type(type = "string")
   private String email;
 
 
