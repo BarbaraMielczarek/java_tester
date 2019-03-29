@@ -21,7 +21,7 @@ public class RestTests extends TestBase{
   public void testCreateIssue() throws IOException {
     skipIfNotFixed(3);
     Set<Issue> oldIssues = getIssues();
-    Issue newIssue = new Issue().withSubject("Test issue Basia").withDescription("New test issue");
+    Issue newIssue = new Issue();//.withSubject("Test issue Basia").withDescription("New test issue").withState_name("Open");
     int issueId = createIssue(newIssue);
     Set<Issue> newIssues = getIssues();
     oldIssues.add(newIssue.withId(issueId));
@@ -30,7 +30,7 @@ public class RestTests extends TestBase{
 
 
   private Set<Issue> getIssues() throws IOException {
-    String json = getExecutor().execute(Request.Get("http://demo.bugify.com/api/issues.json"))
+    String json = getExecutor().execute(Request.Get("http://bugify.stqa.ru/api/issues.json"))
             .returnContent().asString();
     JsonElement parsed = new JsonParser().parse(json);
     JsonElement issues = parsed.getAsJsonObject().get("issues");
@@ -40,14 +40,14 @@ public class RestTests extends TestBase{
 
   private Executor getExecutor() {
     return Executor.newInstance()
-            .auth("a855ac25e4abddb5252b253251cb964e", "");
+            .auth("288f44776e7bec4bf44fdfeb1e646490", "");
   }
 
   private int createIssue(Issue newIssue) throws IOException {
 
-    String json = getExecutor().execute(Request.Post("http://demo.bugify.com/api/issues.json")
+    String json = getExecutor().execute(Request.Post("http://bugify.stqa.ru/api/issues.json")
             .bodyForm(new BasicNameValuePair("subject", newIssue.getSubject()),
-                    new BasicNameValuePair("description", newIssue.getDescription())))
+                    new BasicNameValuePair("description", newIssue.getDescription()), new BasicNameValuePair("state_name", newIssue.getState_name())))
             .returnContent().asString();
     JsonElement parsed = new JsonParser().parse(json);
     return parsed.getAsJsonObject().get("issue_id").getAsInt();

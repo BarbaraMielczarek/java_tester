@@ -30,8 +30,8 @@ public class TestBase {
   }
 
   private Set<Issue> getIssues() throws IOException {
-    RestAssured.authentication = RestAssured.basic("28accbe43ea112d9feb328d2c00b3eed", "");
-    String json = RestAssured.get("http://demo.bugify.com/api/issues.json").asString();
+    RestAssured.authentication = RestAssured.basic("288f44776e7bec4bf44fdfeb1e646490", "");
+    String json = RestAssured.get("http://bugify.stqa.ru/api/issues.json").asString();
     JsonElement parsed = new JsonParser().parse(json);
     JsonElement issues = parsed.getAsJsonObject().get("issues");
     return new Gson().fromJson(issues, new TypeToken<Set<Issue>>() {

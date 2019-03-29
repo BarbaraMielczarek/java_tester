@@ -37,6 +37,9 @@
   <component name="CoverageViewManager">
     <option name="myElementSize" value="293" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/../addressbook-web-tests">
       <ProjectState />
@@ -151,8 +154,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+            <state relative-caret-position="406">
+              <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,10 +166,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestAssuredTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="626">
+              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
                 <element signature="e#559#560#0" expanded="true" />
               </folding>
             </state>
@@ -176,8 +180,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="296">
+              <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -186,13 +190,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../rest-sample/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/Issue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            <state relative-caret-position="516">
+              <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="24" />
               <folding>
-                <element signature="e#655#656#0" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
                 <element signature="e#1210#1211#0" expanded="true" />
                 <element signature="e#1277#1278#0" expanded="true" />
               </folding>
@@ -272,8 +283,8 @@
         <option value="$PROJECT_DIR$/../rest-sample/build.gradle" />
         <option value="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/TestBase.java" />
         <option value="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/Issue.java" />
-        <option value="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestTests.java" />
         <option value="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestAssuredTests.java" />
+        <option value="$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestTests.java" />
       </list>
     </option>
   </component>
@@ -284,7 +295,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2873" />
+    <option name="x" value="2872" />
     <option name="y" value="195" />
     <option name="width" value="2580" />
     <option name="height" value="1551" />
@@ -395,12 +406,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553814623145" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553815100499" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/../addressbook-web-tests" />
@@ -453,7 +464,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.RestTests">
+  <component name="RunManager" selected="TestNG.RestAssuredTests">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.tester.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -839,8 +850,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.RestAssuredTests" />
+        <item itemvalue="TestNG.RestTests" />
         <item itemvalue="TestNG.ChangePasswordTests" />
         <item itemvalue="TestNG.SoapTests" />
         <item itemvalue="TestNG.LoginTests" />
@@ -861,34 +872,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RestTests - 2019.03.28 at 23h 04m 07s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 00h 08m 30s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestTests - 2019.03.28 at 23h 05m 30s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 00h 10m 33s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestTests - 2019.03.28 at 23h 08m 05s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 20h 46m 48s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestTests - 2019.03.28 at 23h 09m 22s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 20h 51m 37s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestTests - 2019.03.28 at 23h 10m 53s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 20h 52m 03s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestTests - 2019.03.28 at 23h 13m 25s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 20h 56m 05s.xml">
       <configuration name="RestTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestAssuredTests - 2019.03.28 at 23h 38m 06s.xml">
+    <history-entry file="RestTests - 2019.03.29 at 20h 56m 54s.xml">
+      <configuration name="RestTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RestTests - 2019.03.29 at 20h 58m 42s.xml">
+      <configuration name="RestTests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="RestAssuredTests - 2019.03.29 at 20h 59m 01s.xml">
       <configuration name="RestAssuredTests" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="RestAssuredTests - 2019.03.28 at 23h 55m 49s.xml">
-      <configuration name="RestAssuredTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RestAssuredTests - 2019.03.29 at 00h 03m 55s.xml">
-      <configuration name="RestAssuredTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="RestAssuredTests - 2019.03.29 at 00h 07m 35s.xml">
+    <history-entry file="RestAssuredTests - 2019.03.29 at 21h 01m 18s.xml">
       <configuration name="RestAssuredTests" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -912,7 +923,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Learn" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5003897" side_tool="true" weight="0.19363818" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49961028" visible="true" weight="0.30576542" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49961028" visible="true" weight="0.31133202" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289166" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49821073" visible="true" weight="0.47466874" />
@@ -1458,11 +1469,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/Issue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        <state relative-caret-position="516">
+          <caret line="69" column="24" lean-forward="true" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="24" />
           <folding>
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
             <element signature="e#1210#1211#0" expanded="true" />
             <element signature="e#1277#1278#0" expanded="true" />
           </folding>
@@ -1471,8 +1480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state relative-caret-position="296">
+          <caret line="36" column="68" lean-forward="true" selection-start-line="36" selection-start-column="68" selection-end-line="36" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1481,10 +1490,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestAssuredTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="626">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
             <element signature="e#559#560#0" expanded="true" />
           </folding>
         </state>
@@ -1492,8 +1502,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../rest-sample/src/test/java/ru/stqa/tester/rest/RestTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="406">
+          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

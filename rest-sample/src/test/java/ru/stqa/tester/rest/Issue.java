@@ -46,16 +46,6 @@ public class Issue {
   }
 
   @Override
-  public String toString() {
-    return "Issue{" +
-            "id=" + id +
-            ", subject='" + subject + '\'' +
-            ", description='" + description + '\'' +
-            ", state_name='" + state_name + '\'' +
-            '}';
-  }
-
-  @Override
   public boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
@@ -70,4 +60,15 @@ public class Issue {
   public int hashCode() {
     return Objects.hash(id, subject, description, state_name);
   }
+
+  @Override
+  public String toString() {
+    return "Issue{" +
+            "id=" + id +
+            ", subject='" + subject + '\'' +
+            ", description='" + description + '\'' +
+            ", state_name='" + state_name + '\'' +
+            '}';
+  }
+
 }
